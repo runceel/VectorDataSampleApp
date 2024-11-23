@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Qdrant.Client" Version="9.0.0" />
+    <PackageReference Include="CommunityToolkit.Aspire.OllamaSharp" Version="9.0.1-beta.83" />
+    <PackageReference Include="Microsoft.Extensions.VectorData.Abstractions" Version="9.0.0-preview.1.24523.1" />
+    <PackageReference Include="Microsoft.SemanticKernel.Connectors.Qdrant" Version="1.30.0-preview" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VectorDataSampleApp.ServiceDefaults\VectorDataSampleApp.ServiceDefaults.csproj" />
+  </ItemGroup>
+
+</Project>

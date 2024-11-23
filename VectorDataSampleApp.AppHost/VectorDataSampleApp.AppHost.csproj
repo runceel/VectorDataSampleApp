@@ -17,4 +17,9 @@
     <PackageReference Include="CommunityToolkit.Aspire.Hosting.Ollama" Version="9.0.1-beta.83" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataInitializerApp\DataInitializerApp.csproj" />
+    <ProjectReference Include="..\DataReadApp\DataReadApp.csproj" />
+  </ItemGroup>
+
 </Project>

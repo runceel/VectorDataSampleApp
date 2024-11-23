@@ -1,0 +1,59 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using Microsoft.Extensions.AI
+@using Microsoft.Extensions.VectorData
+@inject IVectorStore VectorStore
+@inject IEmbeddingGenerator<string, Embedding<float>> EmbeddingGenerator
+
+<PageTitle>Home</PageTitle>
+
+<h1>Microsoft.Extensions.VectorData サンプル</h1>
+
+<div>
+    <input type="text" @bind="InputText" />
+    <button @onclick="OnClickAsync">ベクトル検索</button>
+</div>
+
+<div>
+    <span>@Result</span>
+</div>
+
+@code {
+    private string InputText { get; set; } = "";
+    private string Result { get; set; } = "";
+
+    private async Task OnClickAsync()
+    {
+        // ベクトルデータのコレクションを取得
+        var collection = VectorStore.GetCollection<ulong, MyStoreData>("my-collection");
+        // 入力テキストからベクトルを生成
+        var embedding = await EmbeddingGenerator.GenerateEmbeddingAsync(InputText);
+        // ベクトル検索
+        var searchResult = await collection.VectorizedSearchAsync(
+            embedding.Vector,
+            new VectorSearchOptions
+            {
+                // 一番近いデータを 1 件だけ取得
+                Top = 1,
+            });
+        // 検索結果のデータを取得して表示
+        var foundData = await searchResult.Results.FirstOrDefaultAsync();
+        Result = foundData == null ? "Not found" : $"{foundData.Record.Data}(Score: {foundData.Score})";
+    }
+
+    // データのモデル
+    class MyStoreData
+    {
+        // Id 列
+        [VectorStoreRecordKey]
+        public required ulong Id { get; init; }
+
+        // Data 列
+        [VectorStoreRecordData]
+        public required string Data { get; init; }
+
+        // Vector 列 (Ollama の bge-large は 1024 次元)
+        [VectorStoreRecordVector(1024)]
+        public required ReadOnlyMemory<float> Vector { get; init; }
+    }
+}

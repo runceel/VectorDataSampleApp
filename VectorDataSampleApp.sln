@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDataSampleApp.AppHost
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDataSampleApp.ServiceDefaults", "VectorDataSampleApp.ServiceDefaults\VectorDataSampleApp.ServiceDefaults.csproj", "{3E34089F-376C-42BA-BA20-ABFF9F566503}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataInitializerApp", "DataInitializerApp\DataInitializerApp.csproj", "{CA947865-523C-4C76-AA5D-908310ED022E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataReadApp", "DataReadApp\DataReadApp.csproj", "{8FFA068C-6483-406A-95E0-AC2B6EB06FDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA947865-523C-4C76-AA5D-908310ED022E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA947865-523C-4C76-AA5D-908310ED022E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA947865-523C-4C76-AA5D-908310ED022E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA947865-523C-4C76-AA5D-908310ED022E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFA068C-6483-406A-95E0-AC2B6EB06FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFA068C-6483-406A-95E0-AC2B6EB06FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFA068C-6483-406A-95E0-AC2B6EB06FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFA068C-6483-406A-95E0-AC2B6EB06FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
