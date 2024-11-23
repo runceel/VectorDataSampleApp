@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDataSampleApp.AppHost", "VectorDataSampleApp.AppHost\VectorDataSampleApp.AppHost.csproj", "{1E275969-44F1-4230-BF34-E567DF3884B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorDataSampleApp.ServiceDefaults", "VectorDataSampleApp.ServiceDefaults\VectorDataSampleApp.ServiceDefaults.csproj", "{3E34089F-376C-42BA-BA20-ABFF9F566503}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E275969-44F1-4230-BF34-E567DF3884B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E275969-44F1-4230-BF34-E567DF3884B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E275969-44F1-4230-BF34-E567DF3884B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E275969-44F1-4230-BF34-E567DF3884B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E34089F-376C-42BA-BA20-ABFF9F566503}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
